@@ -1,0 +1,1 @@
+<p>This is the view that returns when a new record is inserted</p>
