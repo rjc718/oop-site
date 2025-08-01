@@ -1,0 +1,1 @@
+<p>This is the page that is returned when a record was deleted</p>

@@ -1,0 +1,1 @@
+<p>This is the Delete Confirmation page that asks if they are sure</p>
