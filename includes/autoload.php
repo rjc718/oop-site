@@ -1,7 +1,7 @@
 <?php
 spl_autoload_register(function ($class) {
     // Namespace prefix
-    $prefix = 'Haskris\\';
+    $prefix = 'Site\\';
 
     // Base directory for the namespace prefix
     $baseDir = __DIR__ . '/../mvc/';

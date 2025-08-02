@@ -1,11 +1,12 @@
 <?php 
-namespace Haskris\Hub\Controllers;
+namespace Site\Controllers;
 
-use Haskris\Hub\Views\PhpTemplateView;
-use Haskris\Base\Models\Request;
-use Haskris\Hub\Models\Pages\Interfaces\Insertable;
-use Haskris\Hub\Models\Pages\Interfaces\Updatable;
-use Haskris\Hub\Models\Pages\Interfaces\Deletable;
+use Site\Views\PhpTemplateView;
+use Site\Models\Request;
+use Site\Models\Pages\Interfaces\Insertable;
+use Site\Models\Pages\Interfaces\Updatable;
+use Site\Models\Pages\Interfaces\Deletable;
+use Site\Models\Pages\Interfaces\Editable;
 
 class ListDetailController
 {
@@ -26,34 +27,43 @@ class ListDetailController
         $action = $this->request->getSafeWord('action', INPUT_POST); 
         $tmpl = null;
 
+        //Each case will perform some action then return a Data object (view)
         switch (strtolower($action)) {
             case 'create':
-                if ($this->model instanceof Insertable) {
+                if ($this->model instanceof Insertable) 
+                {
                     $tmpl = $this->model->create();
                 }
                 break;
             case 'insert':
-                if ($this->model instanceof Insertable) {
+                if ($this->model instanceof Insertable) 
+                {
                     $tmpl = $this->model->insert();
                 }
                 break;
             case 'delete':
-                if ($this->model instanceof Deletable) {
+                if ($this->model instanceof Deletable) 
+                {
                     $tmpl = $this->model->delete();
                 }
                 break;
             case 'deleteconfirm':
-                if ($this->model instanceof Deletable) {
+                if ($this->model instanceof Deletable) 
+                {
                     $tmpl = $this->model->deleteConfirm();
                 }
                 break;
             case 'update':
-                if ($this->model instanceof Updatable) {
+                if ($this->model instanceof Updatable) 
+                {
                     $tmpl = $this->model->update();
                 }
                 break;
             case 'edit':
-                $tmpl = $this->model->edit(); 
+                if ($this->model instanceof Editable) 
+                {
+                    $tmpl = $this->model->edit();
+                }
                 break;
             case 'list':
             default:

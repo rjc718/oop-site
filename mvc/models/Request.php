@@ -1,5 +1,5 @@
 <?php 
-namespace Haskris\Base\Models;
+namespace Site\Models;
 
 /**
  * Request

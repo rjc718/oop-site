@@ -1,5 +1,5 @@
 <?php
-namespace Haskris\Base;
+namespace Site\Models;
 
 use DateTime;
 
@@ -126,12 +126,15 @@ class Helpers
         return $number % 2 === 0;
     }
 
-    function isOverDue(DateTime $due_date, DateTime $actual_date): bool
+    public static function isOverDue(
+        DateTime $due_date, 
+        DateTime $actual_date
+    ): bool
     {
         $due = $due_date->format('Y-m-d');
         $actual = $actual_date->format('Y-m-d');
 
-        return $wip >= $actual;
+        return $due >= $actual;
     }
 
     public static function positiveDelta(
@@ -148,7 +151,9 @@ class Helpers
         if ($input === null) {
             return '';
         }
-        return self::capitalizeWords(rtrim($input));
+        return self::capitalizeWords(
+            rtrim($input)
+        );
     }
 
     public static function queryQuotes(string $string): string

@@ -1,7 +1,7 @@
 <?php
-namespace Haskris\Hub\Models\Pages\Interfaces;
+namespace Site\Models\Pages\Interfaces;
 
-use Haskris\Hub\Views\Data;
+use Site\Views\Data;
 
 /**
  * Any class that implements this interface

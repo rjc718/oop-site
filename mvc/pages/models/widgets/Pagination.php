@@ -1,9 +1,9 @@
 <?php
-namespace Haskris\Hub\Models\Widgets;
+namespace Site\Pages\Models\Widgets;
 
-use Haskris\Hub\Views\Data;
-use Haskris\Hub\Views\Collection as ViewsCollection;
-use Haskris\Base\Models\Widgets\Pagination as Base;
+use Site\Views\Data;
+use Site\Views\Collection as ViewsCollection;
+use Site\Models\Pages\Traits\Pagination as Base;
 
 class Pagination
 {

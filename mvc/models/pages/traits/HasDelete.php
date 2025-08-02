@@ -1,7 +1,7 @@
 <?php
-namespace Haskris\Hub\Models\Pages\Traits;
+namespace Site\Models\Pages\Traits;
 
-use Haskris\Hub\Views\Data;
+use Site\Views\Data;
 
 trait HasDelete {
     public function delete(): Data {

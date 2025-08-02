@@ -1,12 +1,12 @@
 <?php 
-    namespace Haskris\Hub\Models\Pages;
+    namespace Sites\Models\Pages;
 
-    use Haskris\Hub\Models\Pages\ListDetailPage;
-    use Haskris\Hub\Models\Pages\Interfaces\Deletable;
-    use Haskris\Hub\Models\Pages\Traits\HasDelete;
-    use Haskris\Hub\Models\Pages\Interfaces\Updatable;
-    use Haskris\Hub\Models\Pages\Traits\HasUpdate;
-    use Haskris\Hub\Views\Data;
+    use Sites\Models\Pages\ListDetailPage;
+    use Sites\Models\Pages\Interfaces\Deletable;
+    use Sites\Models\Pages\Traits\HasDelete;
+    use Sites\Models\Pages\Interfaces\Updatable;
+    use Sites\Models\Pages\Traits\HasUpdate;
+    use Sites\Views\Data;
 
     /**
      * You must implement any function defined in any interfaces that are implemented
